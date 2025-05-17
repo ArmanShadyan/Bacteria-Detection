@@ -76,3 +76,10 @@ This processes all images in the input directory, saves detected images to the o
 python detection.py --mode train --train_dir path/to/train_dir --val_dir path/to/val_dir --epochs 10
 ```
 This trains the model, saves it to models/bacteria_model.pth, and plots the training history.
+
+Notes
+---
+* The application assumes input images are in .png, .jpg, .jpeg, or .tif format.
+* For training, ensure the training and validation directories contain properly labeled data (currently uses input images as targets for demonstration).
+* The model expects input images to be resized to 224x224 pixels and normalized using ImageNet statistics.
+* Ensure a CUDA-compatible GPU is available for faster processing; otherwise, it defaults to CPU.
